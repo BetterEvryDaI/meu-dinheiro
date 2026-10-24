@@ -1,0 +1,52 @@
+MEU DINHEIRO — PWA V2 (ESTRUTURA ATUALIZADA)
+
+OBJETIVO
+Aplicação web instalável (PWA), com foco em Android e interface adaptável para PC.
+
+ALTERAÇÕES VISUAIS DA V2
+- Saldo do mês: preto quando zero/positivo e vermelho quando negativo.
+- Receitas: valor destacado em verde.
+- Despesas: valor destacado em vermelho.
+- Opções Receita e Despesa invertidas de posição no formulário (Receita primeiro).
+- Descrição do limite de gastos fica vermelha quando o limite é ultrapassado.
+
+RECURSOS ATUAIS
+- Registro, edição e exclusão de receitas e despesas.
+- Resumo por mês e filtro de histórico.
+- Categorias de receitas/despesas.
+- Limite mensal de gastos e indicador visual.
+- Armazenamento local no navegador/dispositivo.
+- Exportação e importação de backup em JSON.
+- Manifesto PWA, ícones PNG e SVG e service worker para cache offline.
+
+ANTES DE PUBLICAR
+1. Extraia o ZIP para uma pasta.
+2. Não altere os caminhos/nome dos arquivos sem atualizar o manifest e o service worker.
+3. Publique TODOS os arquivos mantendo a mesma estrutura de pasta.
+4. A aplicação precisa estar em HTTPS (ou localhost para desenvolvimento) para o service worker e a instalação PWA funcionarem.
+
+PUBLICAÇÃO ESTÁTICA (EXEMPLO: GITHUB PAGES)
+1. Crie/entre numa conta GitHub e crie um repositório para os arquivos públicos do aplicativo.
+2. Envie o conteúdo desta pasta para a raiz do repositório (index.html, sw.js, manifest.webmanifest, ícones etc.).
+3. Em Settings > Pages, configure a publicação a partir da branch principal e da pasta raiz (a opção exata pode variar).
+4. Aguarde o GitHub Pages fornecer o endereço HTTPS do site.
+5. Abra o endereço no PC para validar e no Chrome do Android para testar a instalação.
+
+NOTA SOBRE PRIVACIDADE DO CÓDIGO
+Num serviço de hospedagem estática pública, o código do aplicativo é público. Isso NÃO significa que os lançamentos financeiros locais dos usuários sejam publicados; os dados são guardados no armazenamento local do navegador. Não inclua chaves secretas, senhas ou dados privados nos arquivos do site.
+
+COMO INSTALAR NO ANDROID
+1. Abra o endereço HTTPS no Chrome.
+2. Use o menu do navegador e procure "Instalar app" ou "Adicionar à tela inicial" (o texto pode variar conforme versão/dispositivo).
+3. Abra o ícone instalado.
+4. Com a aplicação carregada, ative o modo avião e teste se abre e se permite registrar/consultar movimentações. Depois desative o modo avião.
+
+LIMITAÇÕES IMPORTANTES
+- Esta é uma versão inicial, não auditada e ainda precisa de testes em aparelho real.
+- Abrir index.html diretamente pelo gerenciador de arquivos permite testar parte das funções, mas NÃO testa a instalação PWA nem o cache offline.
+- Os dados não sincronizam entre aparelhos. Se a pessoa trocar de aparelho, limpar os dados do navegador ou desinstalar/limpar dados do app, pode perder os registros. Recomende exportar backups regularmente e testar a restauração.
+- O armazenamento local do navegador não é um cofre criptografado. Não guardar senhas, números de conta ou outras informações bancárias sensíveis.
+- O funcionamento offline deve ser validado após a primeira abertura online e a instalação/cache dos arquivos.
+
+PRÓXIMA ETAPA
+Publicar o pacote numa hospedagem HTTPS e testar no Android real. Antes de divulgar amplamente, revisar o fluxo de backup/restauração, cálculos, acessibilidade e comportamento offline.
