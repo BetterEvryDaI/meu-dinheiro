@@ -1,0 +1,38 @@
+MEU DINHEIRO — V6 (INTERFACE LIMPA + INSTALAÇÃO OPCIONAL)
+
+O QUE MUDOU
+- Removida a pequena logo da interface; nome e identidade textual permanecem.
+- A logo completa é usada nos ícones de instalação/tela inicial e no favicon.
+- Adicionado botão opcional “Adicionar à tela inicial”.
+- Em navegadores compatíveis, o botão solicita a instalação PWA; nos demais, mostra instruções simples.
+- A pessoa continua podendo usar somente pelo link, sem baixar ZIP ou arquivos.
+- Cache do service worker atualizado.
+
+FUNCIONALIDADES PRESERVADAS
+- Registro, edição e exclusão de receitas e despesas.
+- Resumo mensal, filtros, categorias e limite de gastos.
+- Exportação/importação de backup JSON.
+- Armazenamento local por navegador/dispositivo (sem sincronização).
+
+PUBLICAÇÃO
+Envie o conteúdo desta pasta para a raiz do mesmo repositório GitHub Pages, substituindo os arquivos correspondentes. Preserve a estrutura e o endereço atual. O HTTPS é necessário para PWA/service worker.
+
+INSTALAÇÃO OPCIONAL
+- Android/Chrome: o botão pode abrir a solicitação nativa quando o navegador liberar o evento de instalação. Se não liberar, mostra como usar o menu do navegador.
+- iPhone/Safari: use Compartilhar > Adicionar à Tela de Início.
+- A pessoa pode ignorar a instalação e continuar usando o link normalmente.
+
+DADOS E LIMITAÇÕES
+Os dados ficam no armazenamento local do navegador/dispositivo. Não sincronizam entre aparelhos. Limpar dados do navegador ou desinstalar/limpar dados do app pode apagar registros. Recomende exportar backups regularmente. O armazenamento local não é um cofre criptografado; não guardar senhas ou dados bancários sensíveis.
+
+TESTES ANTES DE DIVULGAR
+1. Testar em Android/Chrome e iPhone/Safari, se possível.
+2. Verificar instalação e ícone/nome.
+3. Registrar movimentações, fechar e reabrir.
+4. Testar modo avião após primeira abertura online.
+5. Confirmar que a atualização não apaga dados existentes.
+
+
+V7: ações de instalar, exportar backup e importar backup ficam visíveis também em telas pequenas. O botão de instalação usa o aviso nativo do navegador quando disponível; caso contrário, mostra instruções curtas e específicas para iPhone ou outros navegadores.
+
+V8: confirmação de instalação simplificada. Em navegadores compatíveis, o botão abre a confirmação nativa após o usuário tocar em Continuar. iPhone e navegadores sem prompt mostram orientação curta.
